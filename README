@@ -20,6 +20,7 @@ Issues
    stuff in python it should be a fair bit faster with good options for multi-
    threaded nonsense.
  * It really wrecks your reflog. REALLY.
+ * The supplied ``number`` function only supports repositories under 256 commits.
 
 Usage
 =====
