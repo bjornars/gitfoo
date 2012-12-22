@@ -12,9 +12,10 @@ def error(s):
 GITFOO = 'gitfoo'
 GITFOO_FILE = '.gitfoo'
 
+hex = '0123456789abcdef'
+numbers = list(map(lambda a: str().join(a), product(hex, hex)))
 def name(number):
-    #return '0123456789abcdef'[number % 16]
-    return '99'
+    return numbers[number % 256]
 
 def git(*commands):
     command = ['git']
