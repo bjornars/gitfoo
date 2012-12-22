@@ -1,0 +1,27 @@
+======
+GITFOO
+======
+
+Why?
+====
+
+The biggest problem with git is of course the ugly random hashes. My program
+did not come along due to 'random changes' (like so-called 'evolution'), 
+but is a result of intelligent design, and my commit log should make that fact evident.
+
+This script can be run over any existing git repository. It recreates 
+the ``master`` branch as a new branch called ``gitfoo``, but with all 
+the commit hashes reworked to be nice and sequencial - just like SVN.
+
+Issues
+======
+ * It only handles linear histories. This is not really seen as a problem.
+ * It is slow, since it delegates all the work to git. By checking hashes and
+   stuff in python it should be a fair bit faster with good options for multi-
+   threaded nonsense.
+ * It really wrecks your reflog. REALLY.
+
+Usage
+=====
+Go to your git project folder, and run the gitfoo.py script.
+`` ̃ /src/project $ /tmp/gitfoo.py `` and Bob's your uncle!
