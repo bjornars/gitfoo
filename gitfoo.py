@@ -1,9 +1,8 @@
 #! /usr/bin/env python3
+import operator
+import subprocess
 
-from subprocess import check_output
-from functools import partial
-from itertools import chain, count
-
+from itertools import chain, product
 from sys import stderr, exit
 
 def error(s):
@@ -20,7 +19,7 @@ def name(number):
 def git(*commands):
     command = ['git']
     command.extend(chain.from_iterable([each.split(' ') for each in commands]))
-    data = check_output(command)
+    data = subprocess.check_output(command)
     return data.decode('utf-8').strip()
 
 revs = git('rev-list --reverse master').split()
