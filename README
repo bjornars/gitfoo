@@ -21,6 +21,8 @@ Issues
    threaded nonsense.
  * It really wrecks your reflog. REALLY.
  * The supplied ``number`` function only supports repositories under 256 commits.
+ * It doesn't handle resequencing a previously 'fixed' repo, some filter-branch magic
+   is required to remove .gitfoo at the present.
 
 Usage
 =====
